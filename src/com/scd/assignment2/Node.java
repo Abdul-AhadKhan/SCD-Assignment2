@@ -7,13 +7,14 @@ package com.scd.assignment2;
 /**
  *
  * @author Abdul Ahad
+ * @param <T>
  */
-public class Node {
-    char data;
-    Node next;
-    Node prev;
+public class Node<T> {
+    T data;
+    Node<T> next;
+    Node<T> prev;
     Node(){
-        data = '\0';
+        data = null;
         next = null;
         prev = null;
     }
