@@ -15,6 +15,12 @@ public class Task2 {
         nonrepeatingStream.add('b');
         nonrepeatingStream.add('c');
         nonrepeatingStream.add('b');
+        nonrepeatingStream.add('a');
+        nonrepeatingStream.add('c');
+        nonrepeatingStream.add('z');
+        nonrepeatingStream.add('i');
+        System.out.println(nonrepeatingStream.getFirstNonRepeating());
+        System.out.println("Printing :-");
         nonrepeatingStream.print();
     }
 }
