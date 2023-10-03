@@ -47,9 +47,30 @@ public class GenericStack<T> {
         }
         else{
             Node<T> temp = head;
-            head.prev.next = null;
+//            head.prev.next = null;
             head = head.prev;
-            head.next = null;
+//            head.prev = head.prev.prev;
+            if (head != null){
+                head.next = null;
+            }
+            size--;
+        }
+    }
+    
+    boolean isEmpty(){
+        
+        return size == 0;
+    }
+    
+    int size(){
+        return size;
+    }
+    
+    void print(){
+        Node<T> temp = head;
+        while (temp != null){
+            System.out.println(temp.data);
+            temp = temp.prev;
         }
     }
 }
