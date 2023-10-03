@@ -13,14 +13,17 @@ public class Task2 {
         FirstNonRepeatingStream nonrepeatingStream = new FirstNonRepeatingStream();
         nonrepeatingStream.add('a');
         nonrepeatingStream.add('b');
-        nonrepeatingStream.add('c');
-        nonrepeatingStream.add('b');
         nonrepeatingStream.add('a');
-        nonrepeatingStream.add('c');
-        nonrepeatingStream.add('z');
+        nonrepeatingStream.add('b');
         nonrepeatingStream.add('i');
-        System.out.println(nonrepeatingStream.getFirstNonRepeating());
-        System.out.println("Printing :-");
+        nonrepeatingStream.add('k');
+        nonrepeatingStream.add('i');
+        nonrepeatingStream.add('k');
+        nonrepeatingStream.add('l');
+        nonrepeatingStream.add('l');
+        
+        System.out.println("First Non Repeating Character: " + nonrepeatingStream.getFirstNonRepeating());
+        System.out.print("Stream : ");
         nonrepeatingStream.print();
     }
 }

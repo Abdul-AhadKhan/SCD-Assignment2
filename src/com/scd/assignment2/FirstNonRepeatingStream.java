@@ -87,6 +87,7 @@ public class FirstNonRepeatingStream {
                     tail.next = null;
                 }
             }
+            
             else {
                 tempPrev.next = tempNext;
                 tempNext.prev = tempPrev;
@@ -106,10 +107,9 @@ public class FirstNonRepeatingStream {
     }
     
     void print(){
-        Node<Character> temp = head;
+        Node<Character> temp = streamhead;
         while (temp != null){
-            System.out.println(temp.data);
-            System.out.println(temp.prev + " " + temp.next + " " + temp);
+            System.out.print(temp.data + " ");
             temp = temp.next;
         }
     }
