@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.scd.assignment2;
+import java.util.EmptyStackException;
 
 /**
  *
@@ -10,8 +11,8 @@ package com.scd.assignment2;
  * @param <T>
  */
 public class GenericStack<T> {
-    Node<T> head;
-    int size;
+    private Node<T> head;
+    private int size;
     
     GenericStack(){
         head = null;
@@ -20,6 +21,9 @@ public class GenericStack<T> {
     
     void push(T data){
         
+        if (data == null){
+            throw new IllegalArgumentException();
+        }
         Node<T> node = new Node();
         node.data = data;
         node.next = null;
@@ -42,8 +46,8 @@ public class GenericStack<T> {
     
     void pop(){
         
-        if (head == null){
-            return;
+        if (isEmpty()){
+            throw new EmptyStackException();
         }
         else{
             Node<T> temp = head;
@@ -67,10 +71,13 @@ public class GenericStack<T> {
     }
     
     void print(){
+        if (isEmpty())
+            throw new EmptyStackException();
         Node<T> temp = head;
         while (temp != null){
             System.out.println(temp.data);
             temp = temp.prev;
         }
     }
+
 }
