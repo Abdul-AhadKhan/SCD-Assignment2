@@ -20,10 +20,11 @@ public class Task2 {
         nonrepeatingStream.add('i');
         nonrepeatingStream.add('k');
         nonrepeatingStream.add('l');
-        nonrepeatingStream.add('l');
+        nonrepeatingStream.add('j');
         
-        System.out.println("First Non Repeating Character: " + nonrepeatingStream.getFirstNonRepeating());
         System.out.print("Stream : ");
         nonrepeatingStream.print();
+        System.out.println("");
+        System.out.println("First Non Repeating Character: " + nonrepeatingStream.getFirstNonRepeating());
     }
 }
